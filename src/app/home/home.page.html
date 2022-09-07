@@ -1,20 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-item>
+    <ion-label>Qtd de cigarros/dia</ion-label>
+    <ion-input type="number" [(ngModel)]="cigarrosPorDia" placeholder="Ex: 5"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Qtd anos fumando</ion-label>
+    <ion-input type="number" [(ngModel)]="anosFumando" placeholder="Ex: 10"></ion-input>
+  </ion-item>
+  <ion-button (click)="calcular()">Calcular</ion-button>
+  <h3>Você perdeu:</h3>
+  <h1>{{diasPerdidos.toFixed(0)}} dias</h1>
 </ion-content>
